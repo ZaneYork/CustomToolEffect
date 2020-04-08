@@ -35,6 +35,13 @@ namespace CustomToolEffect
                 original: AccessTools.DeclaredMethod(typeof(Tool), "tilesAffected"),
                 prefix: new HarmonyMethod(typeof(ToolRewrites.TilesAffectedRewrite), nameof(ToolRewrites.TilesAffectedRewrite.Prefix))
             );
+            AccessTools.GetDeclaredConstructors(typeof(TemporaryAnimatedSprite)).ForEach(ctor =>
+            {
+                harmony.Patch(
+                    original: ctor,
+                    postfix: new HarmonyMethod(typeof(ToolRewrites.TilesAffectedRewrite), nameof(TemporaryAnimatedSpriteRewrites.ConstructorRewrite.Postfix))
+                );
+            });
         }
     }
 }

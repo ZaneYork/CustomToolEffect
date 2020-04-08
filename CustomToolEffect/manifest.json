@@ -1,7 +1,7 @@
 {
    "Name": "Custom Tool Effect",
    "Author": "ZaneYork",
-   "Version": "1.0.2",
+   "Version": "1.1.0",
    "Description": "Custom tool effect range and power",
    "UniqueID": "ZaneYork.CustomToolEffect",
    "EntryDll": "CustomToolEffect.dll",

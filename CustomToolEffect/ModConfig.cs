@@ -36,6 +36,12 @@ namespace CustomToolEffect
             {3, new RangeDefine(new Range(3, 3)) },
             {4, new RangeDefine(new Range(5, 5)) }
         };
+        public Dictionary<int, PowerDefine> BombDefine { get; set; } = new Dictionary<int, PowerDefine>
+        {
+            {286, new PowerDefine(1.4f) },
+            {287, new PowerDefine(1.4f) },
+            {288, new PowerDefine(1.5f) },
+        };
         public class PowerDefine
         {
             public PowerDefine(float power)
